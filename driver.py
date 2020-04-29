@@ -64,7 +64,7 @@ if __name__ == '__main__':
     output_directory = sys.argv[2]
 
     # Find files.
-    input_files = []
+    input_files = "100m.mat"
     for f in os.listdir(input_directory):
         if os.path.isfile(os.path.join(input_directory, f)) and not f.lower().startswith('.') and f.lower().endswith('mat'):
             input_files.append(f)
