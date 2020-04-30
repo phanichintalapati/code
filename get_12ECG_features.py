@@ -169,9 +169,9 @@ def get_12ECG_features(data, header_data):
 
     
 #   We are only using data from lead1
-#    peaks,idx = detect_peaks(data[0],sample_Fs,gain_lead[0])
-    ts,filtered,peaks,ts_tmpl,templates, ts_hr, hr= ecg.ecg(data[0],sample_Fs , show=False)
-
+   # peaks,idx = detect_peaks(data[0],sample_Fs,gain_lead[0])
+    ts,filtered,idx,ts_tmpl,templates, ts_hr, hr= ecg.ecg(data[0],sample_Fs , show=False)
+    peaks=filtered[idx]
    
 #   mean
     mean_RR = np.mean(idx/sample_Fs*1000)
